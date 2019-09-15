@@ -18,3 +18,7 @@
 7 SSM框架所有相关内容 
 8 SpringMVC SpringBoot Mybatis
 9 JAVA高级知识 JDK、GC、JVM、IO和NIO，AIO、锁、线程
+10.HashMap 的扩容加载因子为0.75  当元素个数超过了容量长度的0.75倍时，进行扩容。而且hashMap的容量必须为2的幂。
+   HashMap 底层数据结构为数组+链表。 会发生哈希冲突（即不同K值有相同的hashCode）,在比较equals方法发现不同时，会在这个hashcode的数组位置生成一个单链表，用于存储。
+   当哈希表中的条目数超出了加载因子与当前容量的乘积时，通过调用 rehash 方法将容量翻倍。
+   HashMap不是线程安全的，如果想要线程安全的HashMap，可以通过Collections类的静态方法synchronizedMap获得线程安全的HashMap。
